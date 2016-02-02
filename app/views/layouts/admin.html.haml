@@ -1,0 +1,13 @@
+!!!
+%html
+  %head
+    %title Bricks
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  %body
+    = link_to 'Bricks', admin_bricks_path
+    = link_to 'Projects', admin_projects_path
+    = link_to 'Brick-Colors', admin_brick_colors_path
+    = link_to 'Brick-Types', admin_brick_types_path
+    = yield

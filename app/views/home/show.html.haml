@@ -1,0 +1,6 @@
+%h1 All Projects
+
+%ul
+  - @projects.each do |project|
+    %li
+      = link_to project, project_path(project)

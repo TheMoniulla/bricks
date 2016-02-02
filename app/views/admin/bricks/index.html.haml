@@ -1,0 +1,18 @@
+%h1 Bricks
+= link_to 'New brick', new_admin_brick_path, class: 'btn btn-success'
+
+%table.table.table-striped
+  %tr
+    %th Type
+    %th Color
+    %th Actions
+  - @bricks.each do |brick|
+    %tr
+      %td= brick.brick_type
+      %td= brick.brick_color
+      %td
+        = link_to 'Show', admin_brick_path(brick.id)
+        = link_to 'Edit', edit_admin_brick_path(brick.id)
+        = link_to 'Delete', admin_brick_path(brick.id), method: :delete, data: {confirm: 'Are you sure?'}
+
+= link_to 'Back', admin_root_path

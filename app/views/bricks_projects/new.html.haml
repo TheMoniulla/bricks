@@ -1,0 +1,4 @@
+= simple_form_for [@project, @bricks_project] do |f|
+  = f.input :brick_id, collection: Brick.all, include_blank: false
+  = f.input :quantity
+  = f.submit

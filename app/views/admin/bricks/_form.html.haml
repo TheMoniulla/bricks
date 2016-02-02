@@ -1,0 +1,4 @@
+= simple_form_for [:admin, @brick] do |f|
+  = f.input :brick_type_id, collection: BrickType.all, include_blank: false
+  = f.input :brick_color_id, collection: BrickColor.all, include_blank: false
+  = f.submit

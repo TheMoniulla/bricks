@@ -1,0 +1,11 @@
+%h1= @project
+
+= link_to 'Add project bricks', new_project_bricks_project_path(@project)
+
+%h2 Bricks
+
+%ul
+  - @project.bricks_projects.each do |bricks_project|
+    %li
+      = bricks_project
+      = link_to "Destroy", project_bricks_project_path(@project, bricks_project), method: :delete
